@@ -56,6 +56,45 @@
          table, th, td {
          border: 1px solid black;
          }
+         .background-research {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  margin: 2rem 0;
+}
+
+.research-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.research-column {
+  flex: 1 1 45%;
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.research-column.good {
+  border-left: 6px solid #4CAF50; /* green for good */
+}
+
+.research-column.bad {
+  border-left: 6px solid #F44336; /* red for bad */
+}
+
+.research-column h3 {
+  margin-top: 0;
+}
+
+.research-column ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.research-column li {
+  margin-bottom: 0.5rem;
+}
       </style>
    </head>
    <body>
@@ -78,8 +117,9 @@
       <hr>
       <h2>Background Research</h2>
       <p>Research on patient portals identifies several design and functionality elements that enhance patient engagement and usability. Conversely, many common challenges for patient portal design were also identified in the literature. These research-based principles guided our heuristic analysis and informed the usability tasks in our user testing. By comparing the MedStar Patient Portal against both the best practices and known pitfalls, we could identify where it meets, exceeds, or falls short of user-centered design standards.</p>
-      <h3>Elements of a Good Patient Health Portal:</h3>
-     <p></p>
+      <div class="research-columns">
+      <div class="research-column good">
+      <h3>Best Practices for an Effective Patient Portal:</h3>
       <ol>
          <li><b>Patient-Centered Design</b>:</li>
          <ul>
@@ -117,7 +157,9 @@
             <li>Training and Instruction: Offer instruction and training on how to use the portal, potentially through multi-modal approaches like in-person training. (McAlearney et al., 2017)</li>
          </ul>
       </ol>
-      <h3>Elements that Do Not Make a Good Patient Health Portal:</h3>
+    </div>
+          <div class="research-column bad">
+      <h3>Barriers to an Effective Patient Portal:</h3>
       <ol>
          <li><b>Lack of Patient-Centered Design</b>:</li>
          <ul>
@@ -155,6 +197,8 @@
             <li>Provider Burden: Providers may feel that teaching patients how to use the portal is "one more thing to do" and beyond their scope of work, especially if their own training was unhelpful. (McAlearney et al., 2017)</li>
          </ul>
       </ol>
+          </div>
+      </div>
 <p>In summary, a good patient portal prioritizes intuitive design, clear communication, actionable features, and strong user support, all shaped by continuous user-centered evaluation. Conversely, poorly designed portals suffer from complex interfaces, confusing content, inadequate support for patient decision-making, and design limitations that impede ease of use and trust.
 </p>
       <h2>Heuristic Analysis Notes</h2>
